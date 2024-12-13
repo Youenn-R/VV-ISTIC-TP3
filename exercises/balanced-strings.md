@@ -26,3 +26,26 @@ Use the project in [tp3-balanced-strings](../code/tp3-balanced-strings) to compl
 
 ## Answer
 
+1. 
+Contenu de la chaine : 
+- Vide
+- Seulement des symboles ouvert
+- Seulement des symboles fermé
+- Des symboles ouvert qui correspondent
+- Des symboles ouvert qui ne correspondent pas
+
+Symbole : 
+- Un seul type de symbole
+- Un mix de symboles
+
+Ordre:
+
+- Symboles dans l'ordre 
+- Symboles dans le déshordre 
+
+2. Le statement coverage est plutôt complet, mais il manque le cas où des caractères qui ne sont pas parmi la liste des symboles sont inclus dans la liste. On va donc rajouter les tests correspondants.
+
+3. J'ai bien des prédicats avec 2 opérateurs booléens  
+`stack.isEmpty() || stack.pop() != '('` et toutes les variantes pour chaque symbole, donc il faut bien faire des tests où chacune des possibilités est testée. Mais les cas sont déjà gérés dans les tests existants.
+
+4. 12 mutants ont été générés et 11 ont été tués, donc 92%. En regardant le rapport PIT, je me suis rendu compte que le mutant restant était en fait le `main` qui avait été utilisé pour vérifier que la méthode `isBalanced` se lançait. En retirant celui-là, on atteint donc 100% de meurtre.
