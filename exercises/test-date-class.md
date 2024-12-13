@@ -198,25 +198,27 @@ Tous ces tests nous permettent d'obtenir une couverture de code de 100%.
 A & B & C 
 | A | B | C | 
 |:-:|:-:|:-:|
-| 1 | 1 | 1 | Ce qui équivaut au cas 1 
-| 0 | 1 | 1 | Ce qui équivaut au cas 4 
-| 1 | 0 | 1 | Ce qui équivaut au cas 5 
-| 1 | 1 | 0 | A ajouter dans les tests en temps que cas 6 
+| 1 | 1 | 1 | Ce qui équivaut au cas 1 |
+| 0 | 1 | 1 | Ce qui équivaut au cas 4 |
+| 1 | 0 | 1 | Ce qui équivaut au cas 5 |
+| 1 | 1 | 0 | A ajouter dans les tests en temps que cas 6 |
 
 On en conclut un cas 6 où : 
-    - Le jour est entre 0 et 28. 
-    - Le mois est valorisé à 13.
+    
+- Le jour est entre 0 et 28.
+- Le mois est valorisé à 13.
   
 #### isLeapYear
 ```year % 4 == 0 && year % 100 != 0```
 A & B
 | A | B |
 | :-: | :-: |
-| 1 | 1 | Cas 2 
+| 1 | 1 | Cas 2 |
 | 0 | 1 | 
-| 1 | 0 | Cas 3
+| 1 | 0 | Cas 3|
 
 On en conclut un nouveau cas où : 
+    
     - L'année n'est pas un multiple de 4
     - L'année est un multiple de 100.
     
